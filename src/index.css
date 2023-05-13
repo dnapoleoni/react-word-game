@@ -53,4 +53,8 @@
   p {
     @apply text-base;
   }
+
+  button {
+    @apply py-2 px-8 bg-white border-2 border-black rounded-lg font-bold hover:bg-gray-light transition-colors;
+  }
 }

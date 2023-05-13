@@ -10,15 +10,7 @@ module.exports = {
           lg: '976px',
           xl: '1440px',
         },
-        colors: {
-          'blue': '#1fb6ff',
-          'pink': '#ff49db',
-          'orange': '#ff7849',
-          'green': '#13ce66',
-          'gray-dark': '#273444',
-          'gray': '#8492a6',
-          'gray-light': '#d3dce6',
-        },
+        
         fontFamily: {
           sans: ['DM Sans', 'sans-serif'],
           serif: ['DM Serif Display', 'serif'],
@@ -31,6 +23,15 @@ module.exports = {
                 xl: ['1.5rem', '2rem'],
                 xxl: ['3rem', '4rem'],
                 hero: ['6rem', '7rem']
+            },
+            colors: {
+              'blue': '#1fb6ff',
+              'pink': '#ff49db',
+              'orange': '#ff7849',
+              'green': '#13ce66',
+              'gray-dark': '#273444',
+              'gray': '#8492a6',
+              'gray-light': '#eeeeee'
             },
         }
     },

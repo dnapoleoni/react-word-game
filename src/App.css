@@ -1,6 +1,5 @@
 .App {
-  text-align: center;
-  transition: background-color 1s;
+  @apply mx-8 text-center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
