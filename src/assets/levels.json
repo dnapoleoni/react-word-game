@@ -1,0 +1,29 @@
+{
+    "levels": [
+        {
+            "id": 1,
+            "title": "level one",
+            "description": "level one description",
+            "words": [
+                {
+                    "word": "spades",
+                    "defid": 1 
+                },
+                {
+                    "word": "knife",
+                    "defid": 2 
+                },
+                {
+                    "word": "sparrow",
+                    "defid": 3 
+                }
+            ],
+            "defs": {
+                "1": "tools",
+                "2": "butterfly",
+                "3": "bird"
+            },
+            "theme": "jack"
+        }
+    ]
+}

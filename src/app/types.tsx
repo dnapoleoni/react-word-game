@@ -3,3 +3,6 @@ export type ColorValueHex = `#${string}`;
 
 // corner-of-screen string interpolation
 export type CornerPosition = 'tr'|'br'|'bl'|'tl'|undefined;
+
+// allowed screen types
+export type ScreenType = 'welcome'|'loading'|'game'|'end'|'menu'|'level';

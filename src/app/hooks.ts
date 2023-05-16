@@ -6,4 +6,4 @@ export const useAppDispatch: () => AppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 // customs state hooks
-export const colourChangerHex = (state: RootState) => state.colourChanger.hex;
+// export const colourChangerHex = (state: RootState) => state.colourChanger.hex;
