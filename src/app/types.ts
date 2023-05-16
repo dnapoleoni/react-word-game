@@ -6,3 +6,10 @@ export type CornerPosition = 'tr'|'br'|'bl'|'tl'|undefined;
 
 // allowed screen types
 export type ScreenType = 'welcome'|'game'|'end'|'menu'|'level';
+
+// level data structure
+export type LevelObject = {
+  id: string;
+  title: string;
+  description: string;
+}

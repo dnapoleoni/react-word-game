@@ -1,11 +1,14 @@
 import { createSlice, configureStore, ThunkAction, Action, PayloadAction } from "@reduxjs/toolkit"
 import { ScreenType } from "./types"
+import levelData from "./../assets/levels.json"
 
 // state defaults
 const initialState: {
-  screen: ScreenType
+  screen: ScreenType,
+  levels: Array<object>
 } = {
-  screen: 'welcome'
+  screen: 'welcome',
+  levels: levelData['levels']
 }
 
 // root state object
