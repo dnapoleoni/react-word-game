@@ -1,14 +1,15 @@
 import { createSlice, configureStore, ThunkAction, Action, PayloadAction } from "@reduxjs/toolkit"
-import { ScreenType } from "./types"
+import { LevelObject, ScreenType } from "./types"
 import levelData from "./../assets/levels.json"
 
 // state defaults
 const initialState: {
   screen: ScreenType,
-  levels: Array<object>
+  allLevels: Array<object>,
+  currentLevel?: LevelObject;
 } = {
   screen: 'welcome',
-  levels: levelData['levels']
+  allLevels: levelData['levels']
 }
 
 // root state object
@@ -20,6 +21,11 @@ const rootSlice = createSlice({
   reducers: {
     changeScreen: (state, action: PayloadAction<ScreenType>) => {
       state.screen = action.payload;
+    },
+    loadLevel: (state, action: PayloadAction<LevelObject>) => {
+      const levelToLoad = { ... action.payload };
+      state.currentLevel = levelToLoad;
+      state.screen = 'game';
     }
   }
 })
@@ -32,7 +38,7 @@ export const store = configureStore({
 })
 
 // export actions
-export const { changeScreen } = rootSlice.actions;
+export const { changeScreen, loadLevel } = rootSlice.actions;
 
 // base exports
 export type AppDispatch = typeof store.dispatch

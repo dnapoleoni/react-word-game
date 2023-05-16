@@ -12,4 +12,7 @@ export type LevelObject = {
   id: string;
   title: string;
   description: string;
+  words: Array<object>;
+  defs: object;
+  theme: string;
 }
