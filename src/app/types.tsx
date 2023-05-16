@@ -5,4 +5,4 @@ export type ColorValueHex = `#${string}`;
 export type CornerPosition = 'tr'|'br'|'bl'|'tl'|undefined;
 
 // allowed screen types
-export type ScreenType = 'welcome'|'loading'|'game'|'end'|'menu'|'level';
+export type ScreenType = 'welcome'|'game'|'end'|'menu'|'level';

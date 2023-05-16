@@ -1,51 +1,33 @@
 // core
-import { useEffect } from "react"
-import { useAppDispatch, useAppSelector } from "./app/hooks"
+// import { useEffect } from "react"
+import Logo from "./assets/logo.svg"
+import { useAppSelector } from "./app/hooks"
 
 // assets
 import "./App.css"
-import Logo from "./assets/logo.svg"
 
 // components
-import { BasicButton } from "./components/BasicButton"
-import { Screen } from "./components/Screen"
+import Wrapper from "./components/Wrapper";
+import WelcomeScreen from "./components/GameScreens/WelcomeScreen"
+import LevelScreen from "./components/GameScreens/LevelScreen";
 
 // actions
-import { init } from "./app/store";
-import Tester from "./components/Tester"
 
 function App() {
 
-  const dispatch = useAppDispatch();
+  // screens list
+  const screens = {
+    welcome: WelcomeScreen,
+    level: LevelScreen
+  }
 
-  const test = useAppSelector(({ root: { test }}) => test);
-  const screen = useAppSelector(({ root: { screen }}) => screen);
-  console.log(test, screen);
-
-  // useEffect(() => {
-  //   dispatch(init('tested'));
-  // }, [dispatch])
-  
-
+  // screen state variable
+  const screen: string = useAppSelector(({ root: { screen }}) => screen);
   return (
     <div className="App">
-      <main className="min-h-screen">
-
-        <Tester/>
-
-        {/*<!-- main menu --> */}
-        <Screen>
-          <img src={Logo}/>
-          <p>Drag the letter tiles into tile racks to form words. Drag the tile racks up & down to match words to their cryptic definitions. When all the letters fit and all words match their definitions - you've won the level!</p>
-          <BasicButton onClick={() => dispatch(init('tested'))}>Play Game</BasicButton>
-        </Screen>
-
-        {/*<!-- level menu --> */}
-
-
-        {/*<!-- game screen --> */}
-      
-      
+      <header><Wrapper><img src={Logo}/></Wrapper></header>
+      <main>
+        { (screens as any)[screen]() }
       </main>
     </div>
   )

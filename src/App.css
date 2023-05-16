@@ -1,5 +1,5 @@
 .App {
-  @apply mx-8 text-center;
+  @apply mx-8 text-center min-h-screen;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -3,10 +3,8 @@ import { ScreenType } from "./types"
 
 // state defaults
 const initialState: {
-  test: string,
   screen: ScreenType
 } = {
-  test: 'testing',
   screen: 'welcome'
 }
 
@@ -17,8 +15,8 @@ const rootSlice = createSlice({
 
   // actions
   reducers: {
-    init: (state, action: PayloadAction<string>) => {
-      state.test = action.payload;
+    changeScreen: (state, action: PayloadAction<ScreenType>) => {
+      state.screen = action.payload;
     }
   }
 })
@@ -31,7 +29,7 @@ export const store = configureStore({
 })
 
 // export actions
-export const { init } = rootSlice.actions;
+export const { changeScreen } = rootSlice.actions;
 
 // base exports
 export type AppDispatch = typeof store.dispatch
