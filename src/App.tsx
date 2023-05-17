@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header><Wrapper><img src={Logo}/></Wrapper></header>
-      <main>
+      <main className="min-h-full">
         { (screens as any)[screen]({ levels, currentLevel }) }
       </main>
     </div>
